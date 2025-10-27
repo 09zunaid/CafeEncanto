@@ -73,57 +73,61 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 md:py-32">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-headline mb-16 text-primary animate-in fade-in-down duration-500">Visit Us</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-            <div className="animate-in fade-in-up duration-500" style={{'animation-delay': '100ms'} as React.CSSProperties}>
-              <Card className="hover:shadow-xl transition-shadow h-full hover:-translate-y-1">
-                <CardHeader className="flex flex-row items-center gap-4">
-                  <MapPin className="w-10 h-10 text-accent" />
-                  <CardTitle className="font-headline text-2xl">Our Location</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-lg">123 Enchanted Lane, Magical City, 45678</p>
-                </CardContent>
-              </Card>
-            </div>
-             <div className="animate-in fade-in-up duration-500" style={{'animation-delay': '200ms'} as React.CSSProperties}>
-                <Card className="hover:shadow-xl transition-shadow h-full hover:-translate-y-1">
+      <section id="contact" className="py-20 md:py-32 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-in fade-in-down duration-500">
+            <h2 className="text-4xl md:text-5xl font-headline text-primary">Visit Us</h2>
+            <p className="mt-4 text-xl text-muted-foreground">We&apos;re waiting to welcome you.</p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8 animate-in fade-in-left duration-700">
+              <Card className="bg-secondary/30 border-secondary hover:shadow-primary/10 hover:shadow-lg transition-shadow duration-300">
                   <CardHeader className="flex flex-row items-center gap-4">
-                    <Clock className="w-10 h-10 text-accent" />
-                    <CardTitle className="font-headline text-2xl">Opening Hours</CardTitle>
+                    <div className="bg-primary/10 p-3 rounded-full">
+                      <MapPin className="w-8 h-8 text-primary" />
+                    </div>
+                    <CardTitle className="font-headline text-3xl text-primary">Our Location</CardTitle>
                   </CardHeader>
-                  <CardContent className="text-lg">
-                    <p>Mon - Fri: 7am - 7pm</p>
-                    <p>Sat - Sun: 8am - 8pm</p>
+                  <CardContent>
+                    <p className="text-xl text-foreground">123 Enchanted Lane, Magical City, 45678</p>
                   </CardContent>
-                </Card>
-             </div>
-             <div className="animate-in fade-in-up duration-500" style={{'animation-delay': '300ms'} as React.CSSProperties}>
-                <Card className="hover:shadow-xl transition-shadow h-full hover:-translate-y-1">
+              </Card>
+             <Card className="bg-secondary/30 border-secondary hover:shadow-primary/10 hover:shadow-lg transition-shadow duration-300">
                   <CardHeader className="flex flex-row items-center gap-4">
-                    <Phone className="w-10 h-10 text-accent" />
-                    <CardTitle className="font-headline text-2xl">Contact Us</CardTitle>
+                     <div className="bg-primary/10 p-3 rounded-full">
+                      <Clock className="w-8 h-8 text-primary" />
+                    </div>
+                    <CardTitle className="font-headline text-3xl text-primary">Opening Hours</CardTitle>
                   </CardHeader>
-                  <CardContent className="text-lg">
+                  <CardContent className="text-xl grid grid-cols-2 gap-4 text-foreground">
+                    <p><strong>Mon - Fri:</strong> 7am - 7pm</p>
+                    <p><strong>Sat - Sun:</strong> 8am - 8pm</p>
+                  </CardContent>
+              </Card>
+              <Card className="bg-secondary/30 border-secondary hover:shadow-primary/10 hover:shadow-lg transition-shadow duration-300">
+                  <CardHeader className="flex flex-row items-center gap-4">
+                    <div className="bg-primary/10 p-3 rounded-full">
+                      <Phone className="w-8 h-8 text-primary" />
+                    </div>
+                    <CardTitle className="font-headline text-3xl text-primary">Contact Us</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-xl grid grid-cols-1 sm:grid-cols-2 gap-4 text-foreground">
                     <p><strong>Phone:</strong> (123) 456-7890</p>
                     <p><strong>Email:</strong> hello@cafeencanto.com</p>
                   </CardContent>
-                </Card>
-              </div>
-          </div>
-          <div className="mt-16 rounded-lg overflow-hidden shadow-2xl animate-in fade-in-up duration-700">
-            {mapImage && (
-              <Image 
-                src={mapImage.imageUrl} 
-                alt={mapImage.description}
-                data-ai-hint={mapImage.imageHint}
-                width={1200}
-                height={400}
-                className="w-full object-cover"
-              />
-            )}
+              </Card>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-2xl animate-in fade-in-right duration-700 aspect-[4/3] lg:aspect-auto lg:h-full group">
+              {mapImage && (
+                <Image 
+                  src={mapImage.imageUrl} 
+                  alt={mapImage.description}
+                  data-ai-hint={mapImage.imageHint}
+                  fill
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                />
+              )}
+            </div>
           </div>
         </div>
       </section>
