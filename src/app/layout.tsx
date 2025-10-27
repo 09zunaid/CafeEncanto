@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Inter } from 'next/font/google';
+import { Pacifico, Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
@@ -7,9 +7,10 @@ import { Header } from '@/components/shared/header';
 import { Footer } from '@/components/shared/footer';
 import { FloatingReserveButton } from '@/components/shared/floating-reserve-button';
 
-const playfairDisplay = Playfair_Display({
+const pacifico = Pacifico({
   subsets: ['latin'],
-  variable: '--font-playfair-display',
+  weight: '400',
+  variable: '--font-pacifico',
   display: 'swap',
 });
 
@@ -33,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfairDisplay.variable} ${inter.variable}`}>
+    <html lang="en" className={`${pacifico.variable} ${inter.variable}`}>
       <body className={cn('font-body antialiased')}>
         <Header />
         <main className="min-h-screen bg-background pt-4 animate-in fade-in duration-1000">
