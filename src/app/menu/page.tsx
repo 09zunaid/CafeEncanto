@@ -24,7 +24,7 @@ const menuData = {
       name: 'Glimmering Green Tea',
       description: 'A soothing and refreshing organic green tea with a hint of jasmine.',
       price: '$4.00',
-      imageId: 'menu-coffee-3',
+      imageId: 'menu-tea-1',
     },
     {
       id: 'bev4',
@@ -32,6 +32,20 @@ const menuData = {
       description: 'A dreamy blend of vanilla, steamed milk, espresso, and caramel drizzle.',
       price: '$5.50',
       imageId: 'menu-coffee-4',
+    },
+     {
+      id: 'bev5',
+      name: 'Sunrise Smoothie',
+      description: 'Mango, pineapple, and banana blended to perfection.',
+      price: '$6.00',
+      imageId: 'menu-smoothie-1',
+    },
+    {
+      id: 'bev6',
+      name: 'Lavender Haze Lemonade',
+      description: 'A refreshing lemonade infused with calming lavender.',
+      price: '$4.50',
+      imageId: 'menu-lemonade-1',
     },
   ],
   pastries: [
@@ -63,6 +77,20 @@ const menuData = {
       price: '$4.50',
       imageId: 'menu-pastry-4',
     },
+    {
+      id: 'pas5',
+      name: 'Enchanted Eclair',
+      description: 'Classic eclair with a magical vanilla bean cream filling.',
+      price: '$5.00',
+      imageId: 'menu-eclair-1',
+    },
+    {
+      id: 'pas6',
+      name: 'Cosmic Cupcake',
+      description: 'Vanilla cupcake with a swirl of galaxy-themed frosting.',
+      price: '$4.00',
+      imageId: 'menu-cupcake-1',
+    },
   ],
   meals: [
     {
@@ -92,6 +120,20 @@ const menuData = {
       description: 'A creamy tomato soup served with a side of grilled cheese croutons.',
       price: '$8.50',
       imageId: 'menu-meal-4',
+    },
+    {
+      id: 'mel5',
+      name: 'Dragonfire Tacos',
+      description: 'Spicy shredded chicken tacos with a cooling avocado crema.',
+      price: '$13.00',
+      imageId: 'menu-tacos-1',
+    },
+    {
+      id: 'mel6',
+      name: 'Mystic Garden Salad',
+      description: 'Mixed greens with edible flowers, goat cheese, and a berry vinaigrette.',
+      price: '$10.50',
+      imageId: 'menu-salad-1',
     },
   ],
 };
@@ -136,7 +178,7 @@ function MenuItemCard({ item, index }: { item: MenuItem; index: number }) {
 
 export default function MenuPage() {
   return (
-    <div className="container mx-auto px-4 py-16 md:py-24">
+    <div className="container mx-auto px-4 pt-16 md:pt-24 pb-16 md:pb-24">
       <div className="text-center mb-16 animate-in fade-in-down duration-500">
         <h1 className="text-5xl md:text-6xl font-headline text-primary">Our Magical Menu</h1>
         <p className="mt-4 text-xl text-muted-foreground">Crafted with love, served with a smile.</p>
@@ -149,17 +191,17 @@ export default function MenuPage() {
           <TabsTrigger value="meals" className="py-4 text-lg">Meals</TabsTrigger>
         </TabsList>
         <TabsContent value="beverages">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {menuData.beverages.map((item, index) => <MenuItemCard key={item.id} item={item} index={index} />)}
           </div>
         </TabsContent>
         <TabsContent value="pastries">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {menuData.pastries.map((item, index) => <MenuItemCard key={item.id} item={item} index={index} />)}
           </div>
         </TabsContent>
         <TabsContent value="meals">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {menuData.meals.map((item, index) => <MenuItemCard key={item.id} item={item} index={index} />)}
           </div>
         </TabsContent>

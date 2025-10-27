@@ -25,16 +25,28 @@
       "imageHint": "iced latte"
     },
     {
-      "id": "menu-coffee-3",
+      "id": "menu-tea-1",
       "description": "A classic black Americano in a ceramic mug.",
-      "imageUrl": "https://images.unsplash.com/photo-1652507733698-b0c536a92cd4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxibGFjayUyMGNvZmZlZXxlbnwwfHx8fDE3NjE1MDM0OTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "black coffee"
+      "imageUrl": "https://images.unsplash.com/photo-1578916394334-3c6eb233604f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzfDB8MHxzZWFyY2h8MTB8fGdyZWVuJTIwdGVhfGVufDB8fHx8MTY4MDA5Mjc4NHww&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "green tea"
     },
     {
       "id": "menu-coffee-4",
       "description": "A dreamy caramel macchiato with layered espresso and milk.",
       "imageUrl": "https://images.unsplash.com/photo-1572423819977-17337a442a2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzfDB8MHxzZWFyY2h8Mnx8Y2FyYW1lbCUyMG1hY2NoaWF0b3xlbnwwfHx8fDE2ODAwOTI1Nzd8MA&ixlib=rb-4.0.3&q=80&w=1080",
       "imageHint": "caramel macchiato"
+    },
+    {
+      "id": "menu-smoothie-1",
+      "description": "A vibrant yellow smoothie in a glass.",
+      "imageUrl": "https://images.unsplash.com/photo-1628562386928-569c73e6962c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzfDB8MHxzZWFyY2h8OHx8bWFuZ28lMjBzbW9vdGhpZXxlbnwwfHx8fDE2ODAwOTI4NjV8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "mango smoothie"
+    },
+    {
+      "id": "menu-lemonade-1",
+      "description": "A glass of refreshing lavender lemonade.",
+      "imageUrl": "https://images.unsplash.com/photo-1628445447443-c90a147a4632?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzfDB8MHxzZWFyY2h8MXx8bGF2ZW5kZXIlMjBsZW1vbmFkZXxlbnwwfHx8fDE2ODAwOTI5MDN8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "lavender lemonade"
     },
     {
       "id": "menu-pastry-1",
@@ -61,6 +73,18 @@
       "imageHint": "almond pastry"
     },
     {
+      "id": "menu-eclair-1",
+      "description": "A classic eclair with chocolate frosting.",
+      "imageUrl": "https://images.unsplash.com/photo-1627461937667-b586025e1a3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzfDB8MHxzZWFyY2h8MXx8ZWNsYWlyfGVufDB8fHx8MTY4MDA5Mjk4OHww&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "chocolate eclair"
+    },
+    {
+      "id": "menu-cupcake-1",
+      "description": "A cupcake with colorful frosting and sprinkles.",
+      "imageUrl": "https://images.unsplash.com/photo-1614707267537-b85aaf00c8b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzfDB8MHxzZWFyY2h8Mnx8Z2FsYXh5JTIwY3VwY2FrZXxlbnwwfHx8fDE2ODAwOTMwNDB8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "galaxy cupcake"
+    },
+    {
       "id": "menu-meal-1",
       "description": "A healthy and delicious avocado toast with a poached egg.",
       "imageUrl": "https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhdm9jYWRvJTIwdG9hc3R8ZW58MHx8fHwxNzYxNTI5NjkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -83,6 +107,18 @@
       "description": "A creamy tomato soup with grilled cheese croutons.",
       "imageUrl": "https://images.unsplash.com/photo-1629583622415-3854a8670570?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzfDB8MHxzZWFyY2h8M3x8dG9tYXRvJTIwc291cHxlbnwwfHx8fDE2ODAwOTI2ODJ8MA&ixlib=rb-4.0.3&q=80&w=1080",
       "imageHint": "tomato soup"
+    },
+    {
+      "id": "menu-tacos-1",
+      "description": "Three spicy chicken tacos on a plate.",
+      "imageUrl": "https://images.unsplash.com/photo-1599974579688-85933a102f4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzfDB8MHxzZWFyY2h8NHx8c3BpY3klMjB0YWNvc3xlbnwwfHx8fDE2ODAwOTMxMDZ8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "spicy tacos"
+    },
+    {
+      "id": "menu-salad-1",
+      "description": "A fresh garden salad with edible flowers.",
+      "imageUrl": "https://images.unsplash.com/photo-1562077983-0d1a8da9a195?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzfDB8MHxzZWFyY2h8MXx8ZWRpYmxlJTIwZmxvd2VyJTIwc2FsYWR8ZW58MHx8fHwxNjgwMDkzMTQ0fDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "flower salad"
     },
     {
       "id": "gallery-interior-1",

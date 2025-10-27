@@ -37,7 +37,7 @@ export default function RootLayout({
     <html lang="en" className={`${pacifico.variable} ${nunito.variable}`}>
       <body className={cn('font-body antialiased')}>
         <Header />
-        <main className="min-h-screen bg-background pt-20 animate-in fade-in duration-1000">
+        <main className="min-h-screen bg-background pt-4 animate-in fade-in duration-1000">
           {children}
         </main>
         <Footer />
