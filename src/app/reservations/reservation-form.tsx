@@ -81,7 +81,7 @@ export function ReservationForm() {
   });
 
   return (
-    <Card className="shadow-lg">
+    <Card className="shadow-2xl bg-card/80 backdrop-blur-sm">
       <CardContent className="p-6 md:p-8">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -90,7 +90,7 @@ export function ReservationForm() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Full Name</FormLabel>
+                  <FormLabel className="text-lg">Full Name</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Jane Doe" {...field} />
                   </FormControl>
@@ -103,7 +103,7 @@ export function ReservationForm() {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>WhatsApp Number</FormLabel>
+                  <FormLabel className="text-lg">WhatsApp Number</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. +14155552671" {...field} />
                   </FormControl>
@@ -120,14 +120,14 @@ export function ReservationForm() {
                 name="date"
                 render={({ field }) => (
                   <FormItem className="flex flex-col">
-                    <FormLabel>Date</FormLabel>
+                    <FormLabel className="text-lg">Date</FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
                             variant={'outline'}
                             className={cn(
-                              'w-full pl-3 text-left font-normal',
+                              'w-full pl-3 text-left font-normal text-base h-11',
                               !field.value && 'text-muted-foreground'
                             )}
                           >
@@ -161,16 +161,16 @@ export function ReservationForm() {
                 name="time"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Time</FormLabel>
+                    <FormLabel className="text-lg">Time</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger className="text-base h-11">
                           <SelectValue placeholder="Select a time slot" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
                         {timeSlots.map(time => (
-                          <SelectItem key={time} value={time}>{time}</SelectItem>
+                          <SelectItem key={time} value={time} className="text-base">{time}</SelectItem>
                         ))}
                       </SelectContent>
                     </Select>
@@ -184,10 +184,10 @@ export function ReservationForm() {
               name="guests"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Number of Guests</FormLabel>
+                  <FormLabel className="text-lg">Number of Guests</FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <Users className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                      <Users className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                       <Input type="number" placeholder="2" {...field} className="pl-10" />
                     </div>
                   </FormControl>
@@ -195,7 +195,7 @@ export function ReservationForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full text-lg font-bold py-6">
+            <Button type="submit" className="w-full text-xl font-bold py-7 transition-transform hover:scale-105">
               Send Reservation Request
             </Button>
           </form>

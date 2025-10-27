@@ -21,23 +21,25 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm shadow-sm">
-      <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <Icons.logo className="h-8 w-8 text-primary" />
-          <span className="font-headline text-2xl font-bold text-foreground">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm shadow-md">
+      <div className="container mx-auto flex h-24 items-center justify-between px-4">
+        <Link href="/" className="flex items-center gap-3">
+          <Icons.logo className="h-10 w-10 text-primary" />
+          <span className="font-headline text-3xl font-bold text-foreground">
             Café Encanto
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                'text-lg font-medium transition-colors hover:text-primary',
-                pathname === item.href ? 'text-primary' : 'text-muted-foreground'
+                'text-lg font-medium transition-colors hover:text-primary relative',
+                pathname === item.href ? 'text-primary' : 'text-muted-foreground',
+                'after:content-[\'\'] after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:bg-primary after:scale-x-0 after:transition-transform after:duration-300 after:ease-out',
+                pathname === item.href ? 'after:scale-x-100' : 'hover:after:scale-x-100'
               )}
             >
               {item.label}
@@ -49,7 +51,7 @@ export function Header() {
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+                <Menu className="h-8 w-8" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
@@ -61,7 +63,7 @@ export function Header() {
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
-                      'text-2xl font-medium transition-colors hover:text-primary',
+                      'text-3xl font-medium transition-colors hover:text-primary',
                        pathname === item.href ? 'text-primary' : 'text-foreground'
                     )}
                   >

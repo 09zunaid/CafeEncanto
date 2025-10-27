@@ -13,10 +13,10 @@ export default function GalleryPage() {
   const galleryImages = PlaceHolderImages.filter(p => p.id.startsWith('gallery-'));
   
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline">Our Gallery</h1>
-        <p className="mt-4 text-lg text-muted-foreground">A glimpse into the heart of Café Encanto.</p>
+    <div className="container mx-auto px-4 py-16 md:py-24">
+      <div className="text-center mb-16 animate-in fade-in-down duration-500">
+        <h1 className="text-5xl md:text-6xl font-headline text-primary">Our Gallery</h1>
+        <p className="mt-4 text-xl text-muted-foreground">A glimpse into the heart of Café Encanto.</p>
       </div>
 
       <Carousel
@@ -24,13 +24,13 @@ export default function GalleryPage() {
           align: "start",
           loop: true,
         }}
-        className="w-full max-w-4xl mx-auto"
+        className="w-full max-w-5xl mx-auto"
       >
         <CarouselContent>
-          {galleryImages.map((image) => (
+          {galleryImages.map((image, index) => (
             <CarouselItem key={image.id} className="md:basis-1/2 lg:basis-1/3">
-              <div className="p-1">
-                <Card className="overflow-hidden">
+              <div className="p-2 animate-in fade-in-up duration-500" style={{ animationDelay: `${index * 100}ms`}}>
+                <Card className="overflow-hidden group">
                   <CardContent className="flex aspect-square items-center justify-center p-0">
                     <Image
                       src={image.imageUrl}
@@ -38,7 +38,7 @@ export default function GalleryPage() {
                       data-ai-hint={image.imageHint}
                       width={800}
                       height={800}
-                      className="object-cover w-full h-full transition-transform duration-300 ease-in-out hover:scale-110"
+                      className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
                     />
                   </CardContent>
                 </Card>
@@ -46,8 +46,8 @@ export default function GalleryPage() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="translate-x-[-50%] md:translate-x-0" />
+        <CarouselNext className="translate-x-[50%] md:translate-x-0" />
       </Carousel>
     </div>
   );

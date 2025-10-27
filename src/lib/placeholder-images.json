@@ -31,6 +31,12 @@
       "imageHint": "black coffee"
     },
     {
+      "id": "menu-coffee-4",
+      "description": "A dreamy caramel macchiato with layered espresso and milk.",
+      "imageUrl": "https://images.unsplash.com/photo-1572423819977-17337a442a2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzfDB8MHxzZWFyY2h8Mnx8Y2FyYW1lbCUyMG1hY2NoaWF0b3xlbnwwfHx8fDE2ODAwOTI1Nzd8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "caramel macchiato"
+    },
+    {
       "id": "menu-pastry-1",
       "description": "A flaky, golden-brown croissant on a plate.",
       "imageUrl": "https://images.unsplash.com/photo-1712723246766-3eaea22e52ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjcm9pc3NhbnQlMjBwYXN0cnl8ZW58MHx8fHwxNzYxNTE1MTc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -49,6 +55,12 @@
       "imageHint": "cheesecake slice"
     },
     {
+      "id": "menu-pastry-4",
+      "description": "A delicate almond pastry with a sweet, nutty filling.",
+      "imageUrl": "https://images.unsplash.com/photo-1599784928238-2d0972323438?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzfDB8MHxzZWFyY2h8Mnx8YWxtb25kJTIwcGFzdHJ5fGVufDB8fHx8MTY4MDA5MjYxOXww&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "almond pastry"
+    },
+    {
       "id": "menu-meal-1",
       "description": "A healthy and delicious avocado toast with a poached egg.",
       "imageUrl": "https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhdm9jYWRvJTIwdG9hc3R8ZW58MHx8fHwxNzYxNTI5NjkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -65,6 +77,12 @@
       "description": "A vibrant quinoa salad with fresh vegetables and a light vinaigrette.",
       "imageUrl": "https://images.unsplash.com/photo-1623428187442-b633f414aedc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxxdWlub2ElMjBzYWxhZHxlbnwwfHx8fDE3NjE0OTg3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "quinoa salad"
+    },
+    {
+      "id": "menu-meal-4",
+      "description": "A creamy tomato soup with grilled cheese croutons.",
+      "imageUrl": "https://images.unsplash.com/photo-1629583622415-3854a8670570?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEzfDB8MHxzZWFyY2h8M3x8dG9tYXRvJTIwc291cHxlbnwwfHx8fDE2ODAwOTI2ODJ8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "tomato soup"
     },
     {
       "id": "gallery-interior-1",
@@ -101,6 +119,24 @@
       "description": "A person working on their laptop while sipping a coffee.",
       "imageUrl": "https://images.unsplash.com/photo-1497493292307-31c376b6e479?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cmVtb3RlJTIwd29ya3xlbnwwfHx8fDE3NjE1Nzc4MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "remote work"
+    },
+    {
+      "id": "gallery-exterior",
+      "description": "The charming exterior of the cafe with outdoor seating.",
+      "imageUrl": "https://images.unsplash.com/photo-1559892601-9d5486848952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "cafe exterior"
+    },
+    {
+      "id": "gallery-barista",
+      "description": "A friendly barista smiling while preparing a coffee.",
+      "imageUrl": "https://images.unsplash.com/photo-1579203366914-5b9a7104b23b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "friendly barista"
+    },
+    {
+      "id": "gallery-details",
+      "description": "A close-up of a decorative detail inside the cafe.",
+      "imageUrl": "https://images.unsplash.com/photo-1511018553335-ebc4c83a7587?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "cafe detail"
     }
   ]
 }
