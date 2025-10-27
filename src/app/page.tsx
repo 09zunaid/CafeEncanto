@@ -79,17 +79,17 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-headline text-primary">Visit Us</h2>
             <p className="mt-4 text-xl text-muted-foreground">We&apos;re waiting to welcome you.</p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-in fade-in-left duration-700">
+          <div className="grid lg:grid-cols-3 gap-12 items-center">
+            <div className="lg:col-span-1 space-y-8 animate-in fade-in-left duration-700">
               <Card className="bg-secondary/30 border-secondary hover:shadow-primary/10 hover:shadow-lg transition-shadow duration-300">
                   <CardHeader className="flex flex-row items-center gap-4">
                     <div className="bg-primary/10 p-3 rounded-full">
                       <MapPin className="w-8 h-8 text-primary" />
                     </div>
-                    <CardTitle className="font-headline text-3xl text-primary">Our Location</CardTitle>
+                    <CardTitle className="font-headline text-2xl text-primary">Our Location</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-xl text-foreground">123 Enchanted Lane, Magical City, 45678</p>
+                    <p className="text-lg text-foreground">123 Enchanted Lane, Magical City, 45678</p>
                   </CardContent>
               </Card>
              <Card className="bg-secondary/30 border-secondary hover:shadow-primary/10 hover:shadow-lg transition-shadow duration-300">
@@ -97,11 +97,11 @@ export default function Home() {
                      <div className="bg-primary/10 p-3 rounded-full">
                       <Clock className="w-8 h-8 text-primary" />
                     </div>
-                    <CardTitle className="font-headline text-3xl text-primary">Opening Hours</CardTitle>
+                    <CardTitle className="font-headline text-2xl text-primary">Opening Hours</CardTitle>
                   </CardHeader>
-                  <CardContent className="text-xl grid grid-cols-2 gap-4 text-foreground">
-                    <p><strong>Mon - Fri:</strong> 7am - 7pm</p>
-                    <p><strong>Sat - Sun:</strong> 8am - 8pm</p>
+                  <CardContent className="text-lg grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-foreground">
+                    <p><strong>Mon - Fri:</strong></p><p>7am - 7pm</p>
+                    <p><strong>Sat - Sun:</strong></p><p>8am - 8pm</p>
                   </CardContent>
               </Card>
               <Card className="bg-secondary/30 border-secondary hover:shadow-primary/10 hover:shadow-lg transition-shadow duration-300">
@@ -109,15 +109,15 @@ export default function Home() {
                     <div className="bg-primary/10 p-3 rounded-full">
                       <Phone className="w-8 h-8 text-primary" />
                     </div>
-                    <CardTitle className="font-headline text-3xl text-primary">Contact Us</CardTitle>
+                    <CardTitle className="font-headline text-2xl text-primary">Contact Us</CardTitle>
                   </CardHeader>
-                  <CardContent className="text-xl grid grid-cols-1 sm:grid-cols-2 gap-4 text-foreground">
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
-                    <p><strong>Email:</strong> hello@cafeencanto.com</p>
+                  <CardContent className="text-lg grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-foreground">
+                    <p><strong>Phone:</strong></p><p>(123) 456-7890</p>
+                    <p><strong>Email:</strong></p><p>hello@cafeencanto.com</p>
                   </CardContent>
               </Card>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-2xl animate-in fade-in-right duration-700 aspect-[4/3] lg:aspect-auto lg:h-full group">
+            <div className="lg:col-span-2 rounded-2xl overflow-hidden shadow-2xl animate-in fade-in-right duration-700 h-[60vh] lg:h-full relative group">
               {mapImage && (
                 <Image 
                   src={mapImage.imageUrl} 
