@@ -1,7 +1,6 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
+import { Coffee, Cake, Soup } from 'lucide-react';
 
 const menuData = {
   beverages: [
@@ -33,20 +32,6 @@ const menuData = {
       price: '$5.50',
       imageId: 'menu-coffee-4',
     },
-     {
-      id: 'bev5',
-      name: 'Sunrise Smoothie',
-      description: 'Mango, pineapple, and banana blended to perfection.',
-      price: '$6.00',
-      imageId: 'menu-smoothie-1',
-    },
-    {
-      id: 'bev6',
-      name: 'Lavender Haze Lemonade',
-      description: 'A refreshing lemonade infused with calming lavender.',
-      price: '$4.50',
-      imageId: 'menu-lemonade-1',
-    },
   ],
   pastries: [
     {
@@ -76,20 +61,6 @@ const menuData = {
       description: 'A delicate almond pastry with a sweet, nutty filling.',
       price: '$4.50',
       imageId: 'menu-pastry-4',
-    },
-    {
-      id: 'pas5',
-      name: 'Enchanted Eclair',
-      description: 'Classic eclair with a magical vanilla bean cream filling.',
-      price: '$5.00',
-      imageId: 'menu-eclair-1',
-    },
-    {
-      id: 'pas6',
-      name: 'Cosmic Cupcake',
-      description: 'Vanilla cupcake with a swirl of galaxy-themed frosting.',
-      price: '$4.00',
-      imageId: 'menu-cupcake-1',
     },
   ],
   meals: [
@@ -121,20 +92,6 @@ const menuData = {
       price: '$8.50',
       imageId: 'menu-meal-4',
     },
-    {
-      id: 'mel5',
-      name: 'Dragonfire Tacos',
-      description: 'Spicy shredded chicken tacos with a cooling avocado crema.',
-      price: '$13.00',
-      imageId: 'menu-tacos-1',
-    },
-    {
-      id: 'mel6',
-      name: 'Mystic Garden Salad',
-      description: 'Mixed greens with edible flowers, goat cheese, and a berry vinaigrette.',
-      price: '$10.50',
-      imageId: 'menu-salad-1',
-    },
   ],
 };
 
@@ -146,66 +103,94 @@ type MenuItem = {
   imageId: string;
 };
 
-function MenuItemCard({ item, index }: { item: MenuItem; index: number }) {
-  const image = PlaceHolderImages.find(p => p.id === item.imageId);
+type MenuCategoryProps = {
+  title: string;
+  items: MenuItem[];
+  image: (typeof PlaceHolderImages)[0];
+  icon: React.ElementType;
+  reverse?: boolean;
+};
+
+function MenuCategory({ title, items, image, icon: Icon, reverse = false }: MenuCategoryProps) {
   return (
-    <div className="animate-in fade-in-up duration-500" style={{ animationDelay: `${index * 100}ms` }}>
-      <Card className="flex flex-col h-full overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
-        {image && (
-          <div className="relative h-56 w-full">
-              <Image
-              src={image.imageUrl}
-              alt={image.description}
-              data-ai-hint={image.imageHint}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
+    <section className="py-16 sm:py-24">
+      <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center container mx-auto px-4`}>
+        <div className={`relative h-80 lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl group ${reverse ? 'lg:order-last' : ''} animate-in fade-in-up duration-700`}>
+          <Image
+            src={image.imageUrl}
+            alt={image.description}
+            data-ai-hint={image.imageHint}
+            fill
+            className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
+          />
+           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        </div>
+        <div className="flex flex-col animate-in fade-in-down duration-700">
+           <h2 className="text-4xl md:text-5xl font-headline text-primary mb-8 flex items-center gap-4">
+            <Icon className="w-10 h-10 text-accent" />
+            {title}
+          </h2>
+          <div className="space-y-8">
+            {items.map((item) => (
+              <div key={item.id} className="grid grid-cols-[1fr_auto] gap-x-4 gap-y-1 items-baseline">
+                <div>
+                  <h3 className="text-xl font-bold text-foreground">{item.name}</h3>
+                  <p className="text-muted-foreground">{item.description}</p>
+                </div>
+                <p className="text-xl font-bold text-accent justify-self-end">{item.price}</p>
+              </div>
+            ))}
           </div>
-        )}
-        <CardHeader>
-          <CardTitle className="font-headline text-2xl text-primary">{item.name}</CardTitle>
-          <CardDescription className="text-base">{item.description}</CardDescription>
-        </CardHeader>
-        <CardContent className="flex-grow"></CardContent>
-        <CardFooter>
-          <p className="text-xl font-bold text-accent">{item.price}</p>
-        </CardFooter>
-      </Card>
-    </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
+
 export default function MenuPage() {
+  const beverageImage = PlaceHolderImages.find(p => p.id === 'menu-coffee-1');
+  const pastryImage = PlaceHolderImages.find(p => p.id === 'menu-pastry-1');
+  const mealImage = PlaceHolderImages.find(p => p.id === 'menu-meal-2');
+
   return (
-    <div className="container mx-auto px-4 pt-16 md:pt-24 pb-16 md:pb-24">
-      <div className="text-center mb-16 animate-in fade-in-down duration-500">
+    <div className="pt-16 md:pt-24 pb-16 md:pb-24 bg-background">
+      <div className="text-center mb-16 container mx-auto px-4 animate-in fade-in-down duration-500">
         <h1 className="text-5xl md:text-6xl font-headline text-primary">Our Magical Menu</h1>
         <p className="mt-4 text-xl text-muted-foreground">Crafted with love, served with a smile.</p>
       </div>
+      
+      <div className="space-y-8">
+        {beverageImage && (
+          <MenuCategory 
+            title="Beverages"
+            items={menuData.beverages}
+            image={beverageImage}
+            icon={Coffee}
+          />
+        )}
+        
+        {pastryImage && (
+          <div className="bg-secondary/30">
+            <MenuCategory 
+              title="Pastries"
+              items={menuData.pastries}
+              image={pastryImage}
+              icon={Cake}
+              reverse
+            />
+          </div>
+        )}
 
-      <Tabs defaultValue="beverages" className="w-full">
-        <TabsList className="grid w-full grid-cols-3 mb-10 h-auto bg-primary/10">
-          <TabsTrigger value="beverages" className="py-4 text-lg">Beverages</TabsTrigger>
-          <TabsTrigger value="pastries" className="py-4 text-lg">Pastries</TabsTrigger>
-          <TabsTrigger value="meals" className="py-4 text-lg">Meals</TabsTrigger>
-        </TabsList>
-        <TabsContent value="beverages">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {menuData.beverages.map((item, index) => <MenuItemCard key={item.id} item={item} index={index} />)}
-          </div>
-        </TabsContent>
-        <TabsContent value="pastries">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {menuData.pastries.map((item, index) => <MenuItemCard key={item.id} item={item} index={index} />)}
-          </div>
-        </TabsContent>
-        <TabsContent value="meals">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {menuData.meals.map((item, index) => <MenuItemCard key={item.id} item={item} index={index} />)}
-          </div>
-        </TabsContent>
-      </Tabs>
+        {mealImage && (
+           <MenuCategory 
+            title="Meals"
+            items={menuData.meals}
+            image={mealImage}
+            icon={Soup}
+          />
+        )}
+      </div>
     </div>
   );
 }
