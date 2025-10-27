@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        headline: ['var(--font-pacifico)', 'cursive'],
+        headline: ['var(--font-playfair-display)', 'serif'],
         body: ['var(--font-inter)', 'sans-serif'],
       },
       colors: {
