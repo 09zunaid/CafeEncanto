@@ -1,3 +1,106 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-ambiance",
+      "description": "A cozy, warmly lit cafe interior with comfortable seating.",
+      "imageUrl": "https://images.unsplash.com/photo-1481833761820-0509d3217039?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb3p5JTIwY2FmZXxlbnwwfHx8fDE3NjE1NzA1OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cozy cafe"
+    },
+    {
+      "id": "contact-map",
+      "description": "A stylized map showing the location of the cafe.",
+      "imageUrl": "https://images.unsplash.com/photo-1581922819941-6ab31ab79afc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc2MTUxMjU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city map"
+    },
+    {
+      "id": "menu-coffee-1",
+      "description": "A beautifully crafted cappuccino with latte art.",
+      "imageUrl": "https://images.unsplash.com/photo-1635090976010-d3f6dfbb1bac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjYXBwdWNjaW5vJTIwbGF0dGV8ZW58MHx8fHwxNzYxNTg2ODYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cappuccino latte"
+    },
+    {
+      "id": "menu-coffee-2",
+      "description": "A refreshing iced latte in a tall glass.",
+      "imageUrl": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpY2VkJTIwbGF0dGV8ZW58MHx8fHwxNzYxNTEyMjU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "iced latte"
+    },
+    {
+      "id": "menu-coffee-3",
+      "description": "A classic black Americano in a ceramic mug.",
+      "imageUrl": "https://images.unsplash.com/photo-1652507733698-b0c536a92cd4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxibGFjayUyMGNvZmZlZXxlbnwwfHx8fDE3NjE1MDM0OTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "black coffee"
+    },
+    {
+      "id": "menu-pastry-1",
+      "description": "A flaky, golden-brown croissant on a plate.",
+      "imageUrl": "https://images.unsplash.com/photo-1712723246766-3eaea22e52ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjcm9pc3NhbnQlMjBwYXN0cnl8ZW58MHx8fHwxNzYxNTE1MTc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "croissant pastry"
+    },
+    {
+      "id": "menu-pastry-2",
+      "description": "A rich, decadent chocolate lava cake with a molten center.",
+      "imageUrl": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaG9jb2xhdGUlMjBjYWtlfGVufDB8fHx8MTc2MTU3ODIyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chocolate cake"
+    },
+    {
+      "id": "menu-pastry-3",
+      "description": "A slice of creamy New York cheesecake with a berry topping.",
+      "imageUrl": "https://images.unsplash.com/photo-1759303380841-55c09244fd2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaGVlc2VjYWtlJTIwc2xpY2V8ZW58MHx8fHwxNzYxNDc1NzEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cheesecake slice"
+    },
+    {
+      "id": "menu-meal-1",
+      "description": "A healthy and delicious avocado toast with a poached egg.",
+      "imageUrl": "https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhdm9jYWRvJTIwdG9hc3R8ZW58MHx8fHwxNzYxNTI5NjkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "avocado toast"
+    },
+    {
+      "id": "menu-meal-2",
+      "description": "A hearty panini sandwich with melted cheese and fresh greens.",
+      "imageUrl": "https://images.unsplash.com/photo-1726763581141-fd593e43a335?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwYW5pbmklMjBzYW5kd2ljaHxlbnwwfHx8fDE3NjE1ODY4NjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "panini sandwich"
+    },
+    {
+      "id": "menu-meal-3",
+      "description": "A vibrant quinoa salad with fresh vegetables and a light vinaigrette.",
+      "imageUrl": "https://images.unsplash.com/photo-1623428187442-b633f414aedc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxxdWlub2ElMjBzYWxhZHxlbnwwfHx8fDE3NjE0OTg3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "quinoa salad"
+    },
+    {
+      "id": "gallery-interior-1",
+      "description": "Wide shot of the cafe's charming and rustic interior.",
+      "imageUrl": "https://images.unsplash.com/photo-1588253137728-1e4dd0fe9a93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2FmZSUyMGludGVyaW9yfGVufDB8fHx8MTc2MTUxNDA1NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cafe interior"
+    },
+    {
+      "id": "gallery-interior-2",
+      "description": "A comfortable reading nook with an armchair and a small table.",
+      "imageUrl": "https://images.unsplash.com/photo-1568990416308-c998af4cf9ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyZWFkaW5nJTIwbm9va3xlbnwwfHx8fDE3NjE1NzU4MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "reading nook"
+    },
+    {
+      "id": "gallery-latte-art-1",
+      "description": "Close-up of a barista creating intricate latte art.",
+      "imageUrl": "https://images.unsplash.com/photo-1563311977-d285756282dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYXR0ZSUyMGFydHxlbnwwfHx8fDE3NjE0NzkwMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "latte art"
+    },
+    {
+      "id": "gallery-latte-art-2",
+      "description": "A collection of different latte art designs on various coffees.",
+      "imageUrl": "https://images.unsplash.com/photo-1511920170033-f8396924c348?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb2ZmZWUlMjBhcnR8ZW58MHx8fHwxNzYxNTA1NDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee art"
+    },
+    {
+      "id": "gallery-customers-1",
+      "description": "A group of friends laughing and enjoying their time at the cafe.",
+      "imageUrl": "https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aGFwcHklMjBmcmllbmRzfGVufDB8fHx8MTc2MTU4Njg2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy friends"
+    },
+    {
+      "id": "gallery-customers-2",
+      "description": "A person working on their laptop while sipping a coffee.",
+      "imageUrl": "https://images.unsplash.com/photo-1497493292307-31c376b6e479?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cmVtb3RlJTIwd29ya3xlbnwwfHx8fDE3NjE1Nzc4MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "remote work"
+    }
+  ]
 }
