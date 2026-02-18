@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn('font-body antialiased')}>
+      <body suppressHydrationWarning className={cn('font-body antialiased')}>
         <Header />
         <main className="min-h-screen bg-background pt-4 animate-in fade-in duration-1000">
           {children}
