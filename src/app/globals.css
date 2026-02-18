@@ -1,9 +1,15 @@
+/* Load fonts via Google Fonts and expose them as CSS variables used by Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Nunito+Sans:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    /* font variables used in tailwind.config.ts */
+    --font-cormorant-garamond: 'Cormorant Garamond', serif;
+    --font-nunito-sans: 'Nunito Sans', sans-serif;
     --background: 26 80% 97%;
     --foreground: 24 9.8% 10%;
     --card: 26 80% 97%;
